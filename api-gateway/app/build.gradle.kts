@@ -35,9 +35,6 @@ repositories {
 dependencies {
     // Use the JUnit 5.
     testImplementation(libs.bundles.junit)
-
-    // Use the Kotlin JUnit 5 integration.
-    testImplementation(libs.kotlin.test.junit5)
 }
 
 idea {
