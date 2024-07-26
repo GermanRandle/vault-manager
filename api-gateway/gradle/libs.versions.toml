@@ -1,4 +1,5 @@
 [versions]
+idea-ext = "1.1.8"
 junit = "5.10.3"
 kotlin = "2.0.0"
 
@@ -11,4 +12,5 @@ kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", versi
 junit = ["junit-jupiter-engine", "junit-jupiter-api"]
 
 [plugins]
+idea-ext = { id = "org.jetbrains.gradle.plugin.idea-ext", version.ref = "idea-ext" }
 jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

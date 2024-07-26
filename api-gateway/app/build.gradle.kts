@@ -1,3 +1,6 @@
+import org.jetbrains.gradle.ext.packagePrefix
+import org.jetbrains.gradle.ext.settings
+
 plugins {
     // Facilitates creating an executable JVM application.
     // Implicitly applies the Java plugin (basis for the project).
@@ -7,11 +10,13 @@ plugins {
 
     // Targeting the JVM.
     alias(libs.plugins.jvm)
+
+    alias(libs.plugins.idea.ext)
 }
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.AppKt"
+    mainClass = "german.randle.AppKt"
 }
 
 tasks.named<Test>("test") {
@@ -30,4 +35,13 @@ dependencies {
 
     // Use the Kotlin JUnit 5 integration.
     testImplementation(libs.kotlin.test.junit5)
+}
+
+idea {
+    module {
+        settings {
+            packagePrefix["src/main/kotlin"] = "german.randle"
+            packagePrefix["src/test/kotlin"] = "german.randle"
+        }
+    }
 }
