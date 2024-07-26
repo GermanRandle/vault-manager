@@ -1,6 +1,8 @@
 import org.jetbrains.gradle.ext.packagePrefix
 import org.jetbrains.gradle.ext.settings
 
+val packageName = "german.randle"
+
 plugins {
     // Facilitates creating an executable JVM application.
     // Implicitly applies the Java plugin (basis for the project).
@@ -11,12 +13,13 @@ plugins {
     // Targeting the JVM.
     alias(libs.plugins.jvm)
 
+    // Extension for IJ IDEA, for avoiding nested packages (in particular).
     alias(libs.plugins.idea.ext)
 }
 
 application {
     // Define the main class for the application.
-    mainClass = "german.randle.AppKt"
+    mainClass = "$packageName.AppKt"
 }
 
 tasks.named<Test>("test") {
@@ -40,8 +43,8 @@ dependencies {
 idea {
     module {
         settings {
-            packagePrefix["src/main/kotlin"] = "german.randle"
-            packagePrefix["src/test/kotlin"] = "german.randle"
+            packagePrefix["src/main/kotlin"] = packageName
+            packagePrefix["src/test/kotlin"] = packageName
         }
     }
 }
