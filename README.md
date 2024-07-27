@@ -1,1 +1,10 @@
-# vault-manager
+# Vault Manager
+
+### Tools/Approaches used so far:
+
+- Microservice architecture
+- Gradle
+- Kotlin
+- JUnit
+- IntelliJ IDEA
+- Git
