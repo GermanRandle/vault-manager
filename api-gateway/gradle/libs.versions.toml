@@ -1,15 +1,19 @@
 [versions]
-idea-ext = "1.1.8"
-junit = "5.10.3"
-kotlin = "2.0.0"
+apollo = '3.8.5'
+idea-ext = '1.1.8'
+junit = '5.10.3'
+kotlin = '2.0.0'
 
 [libraries]
-junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
-junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+apollo-api = { module = 'com.apollographql.apollo3:apollo-api-jvm', version.ref = 'apollo' }
+apollo-runtime = { module = 'com.apollographql.apollo3:apollo-runtime', version.ref = 'apollo' }
+junit-jupiter-api = { module = 'org.junit.jupiter:junit-jupiter-api', version.ref = 'junit' }
+junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine', version.ref = 'junit' }
 
 [bundles]
-junit = ["junit-jupiter-engine", "junit-jupiter-api"]
+apollo = ['apollo-api', 'apollo-runtime']
+junit = ['junit-jupiter-api', 'junit-jupiter-engine']
 
 [plugins]
-idea-ext = { id = "org.jetbrains.gradle.plugin.idea-ext", version.ref = "idea-ext" }
-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+idea-ext = { id = 'org.jetbrains.gradle.plugin.idea-ext', version.ref = 'idea-ext' }
+jvm = { id = 'org.jetbrains.kotlin.jvm', version.ref = 'kotlin' }
