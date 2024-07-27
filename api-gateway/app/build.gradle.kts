@@ -34,9 +34,6 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.apollo.api)
-    runtimeOnly(libs.apollo.runtime)
-
     testImplementation(libs.bundles.junit)
 }
 

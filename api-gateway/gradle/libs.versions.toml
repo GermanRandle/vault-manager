@@ -1,12 +1,9 @@
 [versions]
-apollo = '3.8.5'
 idea-ext = '1.1.8'
 junit = '5.10.3'
 kotlin = '2.0.0'
 
 [libraries]
-apollo-api = { module = 'com.apollographql.apollo3:apollo-api-jvm', version.ref = 'apollo' }
-apollo-runtime = { module = 'com.apollographql.apollo3:apollo-runtime', version.ref = 'apollo' }
 junit-jupiter-api = { module = 'org.junit.jupiter:junit-jupiter-api', version.ref = 'junit' }
 junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine', version.ref = 'junit' }
 
