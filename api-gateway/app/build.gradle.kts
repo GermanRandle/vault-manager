@@ -34,7 +34,9 @@ repositories {
 }
 
 dependencies {
-    // Use the JUnit 5.
+    implementation(libs.apollo.api)
+    runtimeOnly(libs.apollo.runtime)
+
     testImplementation(libs.bundles.junit)
 }
 
