@@ -6,3 +6,6 @@ build
 
 # IntelliJ IDEA local files
 .idea
+
+# Randomly appearing directory
+.kotlin

@@ -1,6 +1,7 @@
 import org.jetbrains.gradle.ext.packagePrefix
 import org.jetbrains.gradle.ext.settings
 
+val javaVersion = 21
 val packageName = "german.randle"
 
 plugins {
@@ -35,6 +36,20 @@ repositories {
 dependencies {
     // Use the JUnit 5.
     testImplementation(libs.bundles.junit)
+}
+
+kotlin {
+    // With toolchains support, Gradle can autodetect local JDKs
+    // and install missing JDKs that Gradle requires for the build.
+    jvmToolchain(javaVersion)
+}
+
+java {
+    toolchain {
+        // With toolchains support, Gradle can autodetect local JDKs
+        // and install missing JDKs that Gradle requires for the build.
+        languageVersion.set(JavaLanguageVersion.of(javaVersion))
+    }
 }
 
 idea {
