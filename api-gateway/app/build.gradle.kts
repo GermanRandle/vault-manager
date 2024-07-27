@@ -16,6 +16,9 @@ plugins {
 
     // Extension for IJ IDEA, for avoiding nested packages (in particular).
     alias(libs.plugins.idea.ext)
+
+    // Can be used to configure bom, run tasks and for deployment.
+    alias(libs.plugins.ktor)
 }
 
 application {
@@ -34,6 +37,13 @@ repositories {
 }
 
 dependencies {
+    // Server framework
+    implementation(libs.bundles.ktor)
+
+    // Logging
+    implementation(libs.logback)
+
+    // JUnit
     testImplementation(libs.bundles.junit)
 }
 
