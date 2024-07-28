@@ -5,11 +5,18 @@ val javaVersion = 21
 val packageName = "german.randle"
 
 plugins {
-    // Facilitates creating an executable JVM application.
-    // Implicitly applies the Java plugin (basis for the project).
-    // Also, implicitly applies the Distribution plugin
-    // (which facilitates building archives that serve as distributions).
+    /**
+     * Facilitates creating an executable JVM application. Implicitly applies the Java plugin (basis for the project).
+     * Also, implicitly applies the Distribution plugin (which facilitates building archives that serve as
+     * distributions).
+     */
     application
+
+    /**
+     * Official IDE plugin. In particular, useful for automatic download of source files and Javadoc for project
+     * dependencies.
+     */
+    idea
 
     // Targeting the JVM.
     alias(libs.plugins.jvm)
@@ -51,21 +58,27 @@ dependencies {
 }
 
 kotlin {
-    // With toolchains support, Gradle can autodetect local JDKs
-    // and install missing JDKs that Gradle requires for the build.
+    /**
+     * With toolchains support, Gradle can autodetect local JDKs and install missing JDKs that Gradle requires for the
+     * build.
+     */
     jvmToolchain(javaVersion)
 }
 
 java {
     toolchain {
-        // With toolchains support, Gradle can autodetect local JDKs
-        // and install missing JDKs that Gradle requires for the build.
+        /**
+         * With toolchains support, Gradle can autodetect local JDKs and install missing JDKs that Gradle requires for
+         * the build.
+         */
         languageVersion.set(JavaLanguageVersion.of(javaVersion))
     }
 }
 
 idea {
     module {
+        isDownloadSources = true
+        isDownloadJavadoc = true
         settings {
             packagePrefix["src/main/kotlin"] = packageName
             packagePrefix["src/test/kotlin"] = packageName
