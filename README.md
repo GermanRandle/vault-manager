@@ -9,3 +9,4 @@
 - IntelliJ IDEA
 - Git
 - Ktor
+- GraphQL
