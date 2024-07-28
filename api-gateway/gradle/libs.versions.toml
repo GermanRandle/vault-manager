@@ -1,4 +1,5 @@
 [versions]
+graphql-kotlin = '7.1.4'
 idea-ext = '1.1.8'
 junit = '5.10.3'
 kotlin = '2.0.0'
@@ -6,6 +7,7 @@ ktor = '2.3.12'
 logback = '1.5.6'
 
 [libraries]
+graphql-kotlin-ktor-server = { module = 'com.expediagroup:graphql-kotlin-ktor-server', version.ref = 'graphql-kotlin' }
 junit-jupiter-api = { module = 'org.junit.jupiter:junit-jupiter-api', version.ref = 'junit' }
 junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine', version.ref = 'junit' }
 ktor-server-core = { module = 'io.ktor:ktor-server-core-jvm', version.ref = 'ktor' }

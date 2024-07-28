@@ -40,6 +40,9 @@ dependencies {
     // Server framework
     implementation(libs.bundles.ktor)
 
+    // GraphQL
+    implementation(libs.graphql.kotlin.ktor.server)
+
     // Logging
     implementation(libs.logback)
 
