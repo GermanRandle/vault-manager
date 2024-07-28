@@ -23,7 +23,7 @@ plugins {
 
 application {
     // Define the main class for the application.
-    mainClass = "$packageName.AppKt"
+    mainClass = "$packageName.MainKt"
 }
 
 tasks.named<Test>("test") {
