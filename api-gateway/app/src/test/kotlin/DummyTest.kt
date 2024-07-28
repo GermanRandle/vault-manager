@@ -1,4 +1,4 @@
-package german.randle
+package vault.manager
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

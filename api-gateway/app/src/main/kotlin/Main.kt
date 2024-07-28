@@ -1,8 +1,9 @@
-package german.randle
+package vault.manager
 
 import io.ktor.server.application.Application
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import vault.manager.moduleAggregator
 
 fun main() {
     embeddedServer(

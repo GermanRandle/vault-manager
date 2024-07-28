@@ -1,4 +1,4 @@
-package german.randle
+package vault.manager
 
 import com.expediagroup.graphql.server.ktor.GraphQL
 import com.expediagroup.graphql.server.ktor.graphQLPostRoute

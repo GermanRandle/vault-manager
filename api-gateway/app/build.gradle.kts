@@ -2,7 +2,7 @@ import org.jetbrains.gradle.ext.packagePrefix
 import org.jetbrains.gradle.ext.settings
 
 val javaVersion = 21
-val packageName = "german.randle"
+val packageName = "vault.manager"
 
 plugins {
     /**
