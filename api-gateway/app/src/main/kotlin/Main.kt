@@ -8,6 +8,7 @@ import io.ktor.server.application.install
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import io.ktor.server.routing.routing
+import vault.manager.graphql.ValidateQuery
 
 fun main() {
     embeddedServer(
@@ -21,8 +22,9 @@ fun main() {
 private fun Application.graphQLModule() {
     install(GraphQL) {
         schema {
-            packages = emptyList()
-            queries = listOf(GraphQLQueries)
+            packages = listOf(GRAPHQL_MODELS_PACKAGE)
+            queries = listOf(ValidateQuery)
+            mutations = emptyList()
         }
     }
 
@@ -40,3 +42,5 @@ private const val PORT = 17999
 
 private const val GRAPHQL_ENDPOINT = "graphql" // default
 private const val ROOT_ENDPOINT = "/"
+
+private const val GRAPHQL_MODELS_PACKAGE = "vault.manager.graphql"
