@@ -2,6 +2,7 @@ package vault.manager
 
 import com.expediagroup.graphql.server.ktor.GraphQL
 import com.expediagroup.graphql.server.ktor.graphQLPostRoute
+import com.expediagroup.graphql.server.ktor.graphiQLRoute
 import com.expediagroup.graphql.server.operations.Query
 import io.ktor.server.application.Application
 import io.ktor.server.application.call
@@ -25,6 +26,7 @@ private fun Application.graphQLModule() {
 
     routing {
         graphQLPostRoute()
+        graphiQLRoute()
     }
 }
 
@@ -33,7 +35,9 @@ private fun Application.graphQLModule() {
  * but I need some tool to see what it looks like in a browser.
  */
 object TestQuery : Query {
-    fun hello(): String = "hello"
+    fun hello(): String = "hello!"
+
+    fun hi(): Int = 42
 }
 
 private fun Application.adminModule() {
