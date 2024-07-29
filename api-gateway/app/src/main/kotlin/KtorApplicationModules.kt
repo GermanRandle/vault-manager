@@ -11,16 +11,8 @@ import io.ktor.server.routing.get
 import io.ktor.server.routing.routing
 
 fun Application.moduleAggregator() {
-    restApiModule()
     graphQLModule()
-}
-
-private fun Application.restApiModule() {
-    routing {
-        get("/alive") {
-            call.respondText("The API gateway is alive!")
-        }
-    }
+    adminModule()
 }
 
 private fun Application.graphQLModule() {
@@ -42,4 +34,12 @@ private fun Application.graphQLModule() {
  */
 object TestQuery : Query {
     fun hello(): String = "hello"
+}
+
+private fun Application.adminModule() {
+    routing {
+        get("/alive") {
+            call.respondText("The API gateway is alive!")
+        }
+    }
 }
