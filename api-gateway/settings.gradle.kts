@@ -1,6 +1,6 @@
 rootProject.name = "api-gateway"
 
-include("app")
+include("server")
 
 plugins {
     // Manages which repositories to download toolchains from.

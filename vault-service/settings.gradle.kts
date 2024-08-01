@@ -1,6 +1,6 @@
 rootProject.name = "vault-service"
 
-include("app")
+include("server")
 
 plugins {
     // Manages which repositories to download toolchains from.
