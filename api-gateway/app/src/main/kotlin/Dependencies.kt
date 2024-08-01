@@ -1,3 +1,5 @@
+@file:Suppress("ktlint:standard:filename")
+
 package vault.manager
 
 import vault.manager.webserver.KtorEmbeddedWebServer

@@ -1,11 +1,11 @@
 # Gradle project-specific cache directory
-.gradle
+**/.gradle/
 
 # Build output directory
-build
+**/build/
 
 # IntelliJ IDEA local files
-.idea
+**/.idea/
 
 # Randomly appearing directory
-.kotlin
+**/.kotlin/
