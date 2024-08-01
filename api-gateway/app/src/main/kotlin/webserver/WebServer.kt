@@ -1,5 +1,5 @@
 package vault.manager.apigateway.webserver
 
-interface WebServer {
+internal interface WebServer {
     fun run()
 }

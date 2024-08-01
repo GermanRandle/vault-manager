@@ -12,7 +12,7 @@ import vault.manager.apigateway.ApplicationConfig
 import vault.manager.apigateway.WebServerConfig
 import vault.manager.apigateway.graphql.ValidateQuery
 
-object KtorEmbeddedWebServer : WebServer {
+internal object KtorEmbeddedWebServer : WebServer {
     override fun run() {
         embeddedServer(
             Netty,
