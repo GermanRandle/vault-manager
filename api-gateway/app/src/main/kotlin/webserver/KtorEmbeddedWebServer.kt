@@ -10,7 +10,8 @@ import io.ktor.server.netty.Netty
 import io.ktor.server.routing.routing
 import vault.manager.apigateway.ApplicationConfig
 import vault.manager.apigateway.WebServerConfig
-import vault.manager.apigateway.graphql.ValidateQuery
+import vault.manager.apigateway.graphql.mutation.supportedMutations
+import vault.manager.apigateway.graphql.query.supportedQueries
 
 internal object KtorEmbeddedWebServer : WebServer {
     override fun run() {
@@ -26,9 +27,9 @@ internal object KtorEmbeddedWebServer : WebServer {
 private fun Application.graphQLModule() {
     install(GraphQL) {
         schema {
-            packages = listOf(ApplicationConfig.GRAPHQL_MODELS_PACKAGE)
-            queries = listOf(ValidateQuery)
-            mutations = emptyList()
+            packages = ApplicationConfig.graphQLSchemaDefinitionPackages
+            queries = supportedQueries
+            mutations = supportedMutations
         }
     }
 

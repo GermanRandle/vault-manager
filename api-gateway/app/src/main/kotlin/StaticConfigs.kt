@@ -2,7 +2,7 @@ package vault.manager.apigateway
 
 internal object ApplicationConfig {
     private const val ROOT_PACKAGE = "vault.manager.apigateway"
-    const val GRAPHQL_MODELS_PACKAGE = "$ROOT_PACKAGE.graphql"
+    val graphQLSchemaDefinitionPackages = listOf("$ROOT_PACKAGE.graphql.model")
 }
 
 internal object WebServerConfig {
