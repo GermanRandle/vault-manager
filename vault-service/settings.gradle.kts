@@ -1,4 +1,4 @@
-rootProject.name = "api-gateway"
+rootProject.name = "vault-service"
 
 include("app")
 
