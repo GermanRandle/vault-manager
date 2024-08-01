@@ -1,4 +1,4 @@
-package vault.manager.graphql
+package vault.manager.apigateway.graphql
 
 import com.expediagroup.graphql.server.operations.Query
 

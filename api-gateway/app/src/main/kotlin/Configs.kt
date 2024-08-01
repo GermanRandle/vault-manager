@@ -1,7 +1,7 @@
-package vault.manager
+package vault.manager.apigateway
 
 object ApplicationConfig {
-    private const val ROOT_PACKAGE = "vault.manager"
+    private const val ROOT_PACKAGE = "vault.manager.apigateway"
     const val GRAPHQL_MODELS_PACKAGE = "$ROOT_PACKAGE.graphql"
 }
 
