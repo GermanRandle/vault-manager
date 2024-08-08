@@ -10,3 +10,4 @@
 - Git
 - Ktor
 - GraphQL
+- Protocol Buffers

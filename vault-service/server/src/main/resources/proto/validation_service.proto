@@ -1,0 +1,10 @@
+service ValidationService {
+  rpc Validate (ValidateRequest) returns (ValidateResponse);
+}
+
+message ValidateRequest {
+}
+
+message ValidateResponse {
+  repeated string defects = 1;
+}

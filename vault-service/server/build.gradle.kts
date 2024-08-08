@@ -18,7 +18,12 @@ plugins {
     alias(libs.plugins.jvm)
 
     // Extension for IJ IDEA, for avoiding nested packages (in particular).
+    // https://github.com/jetbrains/gradle-idea-ext-plugin
     alias(libs.plugins.idea.ext)
+
+    // Provides protobuf compilation.
+    // https://github.com/google/protobuf-gradle-plugin
+    alias(libs.plugins.protobuf)
 }
 
 application {

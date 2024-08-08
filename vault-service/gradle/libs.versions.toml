@@ -2,6 +2,7 @@
 idea-ext = '1.1.8'
 junit = '5.10.3'
 kotlin = '2.0.0'
+protobuf-plugin = '0.9.4'
 
 [libraries]
 junit-jupiter-api = { module = 'org.junit.jupiter:junit-jupiter-api', version.ref = 'junit' }
@@ -12,4 +13,5 @@ junit = ['junit-jupiter-api', 'junit-jupiter-engine']
 
 [plugins]
 idea-ext = { id = 'org.jetbrains.gradle.plugin.idea-ext', version.ref = 'idea-ext' }
-jvm = { id = "org.jetbrains.kotlin.jvm", version = "1.9.23" }
+jvm = { id = 'org.jetbrains.kotlin.jvm', version.ref = 'kotlin' }
+protobuf = { id = 'com.google.protobuf', version.ref = 'protobuf-plugin' }
