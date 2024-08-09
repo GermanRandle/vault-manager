@@ -70,3 +70,7 @@ idea {
         }
     }
 }
+
+protobuf {
+
+}
