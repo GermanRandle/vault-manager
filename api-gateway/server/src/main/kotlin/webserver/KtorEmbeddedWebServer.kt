@@ -1,4 +1,4 @@
-package vault.manager.apigateway.webserver
+package vault.manager.apiGateway.server.webserver
 
 import com.expediagroup.graphql.server.ktor.GraphQL
 import com.expediagroup.graphql.server.ktor.graphQLPostRoute
@@ -8,10 +8,10 @@ import io.ktor.server.application.install
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import io.ktor.server.routing.routing
-import vault.manager.apigateway.ApplicationConfig
-import vault.manager.apigateway.WebServerConfig
-import vault.manager.apigateway.graphql.mutation.supportedMutations
-import vault.manager.apigateway.graphql.query.supportedQueries
+import vault.manager.apiGateway.server.ApplicationConfig
+import vault.manager.apiGateway.server.WebServerConfig
+import vault.manager.apiGateway.server.graphql.mutation.supportedMutations
+import vault.manager.apiGateway.server.graphql.query.supportedQueries
 
 internal object KtorEmbeddedWebServer : WebServer {
     override fun run() {

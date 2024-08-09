@@ -2,7 +2,7 @@ import org.jetbrains.gradle.ext.packagePrefix
 import org.jetbrains.gradle.ext.settings
 
 val javaVersion = 21
-val packageName = "vault.manager.apigateway"
+val packageName = "vault.manager.apiGateway.server"
 
 plugins {
     // Facilitates creating an executable JVM application. Implicitly applies the Java plugin (basis for the project).

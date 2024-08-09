@@ -1,4 +1,4 @@
-package vault.manager.apigateway
+package vault.manager.apiGateway.server
 
 internal object ApplicationConfig {
     private const val ROOT_PACKAGE = "vault.manager.apigateway"

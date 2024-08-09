@@ -1,7 +1,7 @@
-package vault.manager.apigateway
+package vault.manager.apiGateway.server
 
-import vault.manager.apigateway.webserver.KtorEmbeddedWebServer
-import vault.manager.apigateway.webserver.WebServer
+import vault.manager.apiGateway.server.webserver.KtorEmbeddedWebServer
+import vault.manager.apiGateway.server.webserver.WebServer
 
 internal object DI {
     val webServer: WebServer = KtorEmbeddedWebServer

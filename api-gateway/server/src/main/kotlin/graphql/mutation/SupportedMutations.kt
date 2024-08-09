@@ -1,4 +1,4 @@
-package vault.manager.apigateway.graphql.mutation
+package vault.manager.apiGateway.server.graphql.mutation
 
 import com.expediagroup.graphql.server.operations.Mutation
 

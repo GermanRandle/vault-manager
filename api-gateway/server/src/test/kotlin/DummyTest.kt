@@ -1,4 +1,4 @@
-package vault.manager.apigateway
+package vault.manager.apiGateway.server
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

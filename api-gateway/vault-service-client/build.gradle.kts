@@ -2,7 +2,7 @@ import org.jetbrains.gradle.ext.packagePrefix
 import org.jetbrains.gradle.ext.settings
 
 val javaVersion = 21
-val packageName = "vault.manager.apigateway.vaultserviceclient"
+val packageName = "vault.manager.apiGateway.vaultServiceClient"
 
 plugins {
     // Official IDE plugin. In particular, useful for automatic download of source files
