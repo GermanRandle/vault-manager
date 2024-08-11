@@ -83,10 +83,10 @@ protobuf {
     }
     plugins {
         create("grpc") {
-            artifact = "io.grpc:protoc-gen-grpc-java:${libs.versions.grpc.protobuf.get()}"
+            artifact = libs.grpc.java.gen.get().toString()
         }
         create("grpckt") {
-            artifact = "io.grpc:protoc-gen-grpc-kotlin:${libs.versions.grpc.kotlin.get()}:jdk8@jar"
+            artifact = "${libs.grpc.kotlin.gen.get()}:jdk8@jar"
         }
     }
     generateProtoTasks {

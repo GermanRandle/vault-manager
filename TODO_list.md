@@ -1,6 +1,5 @@
 ### Feature: gRPC communication `api-gateway <-> vault-service`.
 
-- Understand the proto generation magic
 - Implement server and client (test w/Postman?)
 - Test how schema modifications work
 - Docker for running two MS at the same time
