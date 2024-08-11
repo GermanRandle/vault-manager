@@ -1,5 +1,5 @@
 ### Feature: gRPC communication `api-gateway <-> vault-service`.
-- Fix plain old linkage error
+
 - Understand the proto generation magic
 - Implement server and client (test w/Postman?)
 - Test how schema modifications work
@@ -9,5 +9,6 @@
 - What's the value of Gradle's `group` and `version`?
 
 ### Feature: vault validation
+
 - Define basic entities
 - Introduce invariants

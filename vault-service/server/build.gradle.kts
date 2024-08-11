@@ -43,11 +43,9 @@ repositories {
 
 dependencies {
     // Protocol buffers https://github.com/grpc/grpc-kotlin/tree/master/compiler
-    implementation(libs.protobuf.kotlin) // ???
-    implementation(libs.grpc.kotlin.gen) // code generation
-    implementation(libs.grpc.kotlin.stub) // runtime support
-    implementation(libs.grpc.java.gen)
-    implementation(libs.grpc.protobuf)
+    implementation(libs.protobuf.kotlin) // com.google.protobuf.kotlin package
+    implementation(libs.grpc.protobuf) // io.grpc.protobuf package
+    implementation(libs.bundles.grpc.kotlin) // code generation & runtime support
 
     // JUnit
     testImplementation(libs.bundles.junit)
@@ -84,7 +82,7 @@ protobuf {
     }
     plugins {
         create("grpc") {
-            artifact = "io.grpc:protoc-gen-grpc-java:${libs.versions.grpc.java.get()}"
+            artifact = "io.grpc:protoc-gen-grpc-java:${libs.versions.grpc.protobuf.get()}"
         }
         create("grpckt") {
             artifact = "io.grpc:protoc-gen-grpc-kotlin:${libs.versions.grpc.kotlin.get()}:jdk8@jar"
