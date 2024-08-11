@@ -13,7 +13,7 @@ import vault.manager.apiGateway.server.WebServerConfig
 import vault.manager.apiGateway.server.graphql.mutation.supportedMutations
 import vault.manager.apiGateway.server.graphql.query.supportedQueries
 
-internal object KtorEmbeddedWebServer : WebServer {
+internal object KtorGraphQLEmbeddedWebServer : WebServer {
     override fun run() {
         embeddedServer(
             Netty,

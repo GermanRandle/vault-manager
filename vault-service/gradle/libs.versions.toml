@@ -24,6 +24,7 @@ junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine', vers
 grpc-java-gen = { module = 'io.grpc:protoc-gen-grpc-java', version.ref = 'grpc-protobuf' }
 grpc-kotlin-stub = { module = 'io.grpc:grpc-kotlin-stub', version.ref = 'grpc-kotlin' }
 grpc-kotlin-gen = { module = 'io.grpc:protoc-gen-grpc-kotlin', version.ref = 'grpc-kotlin' }
+grpc-netty = { module = 'io.grpc:grpc-netty-shaded', version.ref = 'grpc-protobuf' }
 grpc-protobuf = { module = 'io.grpc:grpc-protobuf', version.ref = 'grpc-protobuf' }
 protobuf-kotlin = { module = 'com.google.protobuf:protobuf-kotlin', version.ref = 'protobuf-google' }
 protoc = { module = 'com.google.protobuf:protoc', version.ref = 'protobuf-google' }

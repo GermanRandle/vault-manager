@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.protobuf.kotlin) // com.google.protobuf.kotlin package
     implementation(libs.grpc.protobuf) // io.grpc.protobuf package
     implementation(libs.bundles.grpc.kotlin) // code generation & runtime support
+    implementation(libs.grpc.netty) // server
 
     // JUnit
     testImplementation(libs.bundles.junit)

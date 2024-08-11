@@ -1,6 +1,8 @@
 ### Feature: gRPC communication `api-gateway <-> vault-service`.
 
-- Implement server and client (test w/Postman?)
+- Test gRPC server (Postman?)
+- Make sure that code is "clean"
+- Implement client
 - Test how schema modifications work
 - Docker for running two MS at the same time
 - Shared `build.gradle` files for microservices
