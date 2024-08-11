@@ -3,13 +3,24 @@ idea-ext = '1.1.8'
 junit = '5.10.3'
 kotlin = '2.0.0'
 protobuf-plugin = '0.9.4'
+protobuf-kotlin = '4.27.3'
+grpc-kotlin = '1.4.1'
+grpc-java = '1.66.0'
+
 
 [libraries]
 junit-jupiter-api = { module = 'org.junit.jupiter:junit-jupiter-api', version.ref = 'junit' }
 junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine', version.ref = 'junit' }
+protobuf-kotlin = { module = 'com.google.protobuf:protobuf-kotlin', version.ref = 'protobuf-kotlin' }
+grpc-kotlin-stub = { module = 'io.grpc:grpc-kotlin-stub', version.ref = 'grpc-kotlin' }
+grpc-kotlin-gen = { module = 'io.grpc:protoc-gen-grpc-kotlin', version.ref = 'grpc-kotlin' }
+grpc-java-gen = { module = 'io.grpc:protoc-gen-grpc-java', version.ref = 'grpc-java' }
+grpc-protobuf = { module = 'io.grpc:grpc-protobuf', version.ref = 'grpc-java' }
+
 
 [bundles]
 junit = ['junit-jupiter-api', 'junit-jupiter-engine']
+
 
 [plugins]
 idea-ext = { id = 'org.jetbrains.gradle.plugin.idea-ext', version.ref = 'idea-ext' }

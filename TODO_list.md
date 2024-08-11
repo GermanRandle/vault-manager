@@ -1,6 +1,6 @@
 ### Feature: gRPC communication `api-gateway <-> vault-service`.
-- Read Protobuf Gradle plugin docs – https://github.com/google/protobuf-gradle-plugin
-- Generate proto files (separately!) – https://github.com/grpc/grpc-kotlin/blob/master/examples/stub/build.gradle.kts
+- Fix plain old linkage error
+- Understand the proto generation magic
 - Implement server and client (test w/Postman?)
 - Test how schema modifications work
 - Docker for running two MS at the same time
