@@ -1,3 +1,5 @@
+option java_package = "vault.manager.vaultService.server";
+
 service ValidationService {
   rpc Validate (ValidateRequest) returns (ValidateResponse);
 }
