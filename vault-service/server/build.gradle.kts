@@ -76,9 +76,10 @@ idea {
     }
 }
 
+// https://github.com/grpc/grpc-kotlin/tree/master/compiler
 protobuf {
     protoc {
-        artifact = "com.google.protobuf:protoc:${libs.versions.protobuf.kotlin.get()}"
+        artifact = libs.protoc.get().toString()
     }
     plugins {
         create("grpc") {

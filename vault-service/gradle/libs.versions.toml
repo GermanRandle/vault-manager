@@ -4,7 +4,7 @@ grpc-kotlin = '1.4.1'
 idea-ext = '1.1.8'
 junit = '5.10.3'
 kotlin = '2.0.0'
-protobuf-kotlin = '4.27.3'
+protobuf-google = '4.27.3'
 protobuf-plugin = '0.9.4'
 
 
@@ -14,7 +14,8 @@ junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine', vers
 grpc-kotlin-stub = { module = 'io.grpc:grpc-kotlin-stub', version.ref = 'grpc-kotlin' }
 grpc-kotlin-gen = { module = 'io.grpc:protoc-gen-grpc-kotlin', version.ref = 'grpc-kotlin' }
 grpc-protobuf = { module = 'io.grpc:grpc-protobuf', version.ref = 'grpc-protobuf' }
-protobuf-kotlin = { module = 'com.google.protobuf:protobuf-kotlin', version.ref = 'protobuf-kotlin' }
+protobuf-kotlin = { module = 'com.google.protobuf:protobuf-kotlin', version.ref = 'protobuf-google' }
+protoc = { module = 'com.google.protobuf:protoc', version.ref = 'protobuf-google' }
 
 
 [bundles]
