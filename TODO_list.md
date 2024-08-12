@@ -1,4 +1,4 @@
-### [v0.1] gRPC communication `api-gateway <-> vault-service`
+### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
 - Protobuf naming (Grpc<>)
 - Dependency injection
@@ -20,6 +20,9 @@
 - How to write tests
 - Validate business ids
 - Routine checks
+
+### [v1.0] Start the open source era
+- Prepare my GitHub: README, description, tags
 
 ## Ideas for future
 
