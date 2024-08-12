@@ -1,7 +1,7 @@
 package vault.manager.apiGateway.server
 
 internal object ApplicationConfig {
-    private const val ROOT_PACKAGE = "vault.manager.apigateway"
+    private const val ROOT_PACKAGE = "vault.manager.apiGateway.server"
     val graphQLSchemaDefinitionPackages = listOf("$ROOT_PACKAGE.graphql.model")
 }
 
