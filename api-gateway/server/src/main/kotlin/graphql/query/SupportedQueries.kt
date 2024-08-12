@@ -1,5 +1,5 @@
 package vault.manager.apiGateway.server.graphql.query
 
-val supportedQueries = listOf(
+internal val supportedQueries = listOf(
     ValidateGraphQLQuery,
 )

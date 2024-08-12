@@ -1,5 +1,5 @@
 package vault.manager.vaultService.server
 
-object WebServerConfig {
-    val PORT = 49153
+internal object WebServerConfig {
+    const val PORT = 49153
 }

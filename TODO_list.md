@@ -1,6 +1,5 @@
 ### Feature: gRPC communication `api-gateway <-> vault-service`.
 
-- Make sure that code is "clean"
 - Implement client
 - Test how schema modifications work
 - Docker for running two MS at the same time
