@@ -1,6 +1,5 @@
 ### Feature: gRPC communication `api-gateway <-> vault-service`.
 
-- Test gRPC server (Postman?)
 - Make sure that code is "clean"
 - Implement client
 - Test how schema modifications work
