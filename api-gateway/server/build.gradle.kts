@@ -40,6 +40,9 @@ repositories {
 }
 
 dependencies {
+    // Internal
+    implementation(project(":vault-service-client"))
+
     // Server framework
     implementation(libs.bundles.ktor)
 

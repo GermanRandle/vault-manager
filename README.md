@@ -11,5 +11,6 @@
 - Ktor
 - GraphQL
 - Protocol Buffers
+- gRPC
 - Postman
 - Ktlint

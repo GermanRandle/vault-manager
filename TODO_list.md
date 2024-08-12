@@ -1,6 +1,9 @@
 ### [v0.1] gRPC communication `api-gateway <-> vault-service`
 
-- Implement client
+- Protobuf naming (Grpc<>)
+- Dependency injection
+- Exception safety
+- Gql success/error
 - Docker for running two MS at the same time
 
 ### [v0.1.1] Infrastructure enhancements
@@ -14,6 +17,7 @@
 - Define basic entities
 - Introduce invariants
 - Validate directory structure
+- How to write tests
 - Validate business ids
 - Routine checks
 

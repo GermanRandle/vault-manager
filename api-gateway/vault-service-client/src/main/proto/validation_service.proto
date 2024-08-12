@@ -1,4 +1,4 @@
-option java_package = "vault.manager.apiGateway.vaultServiceClient";
+option java_package = "vault.manager.apiGateway.vaultServiceClient.proto";
 
 service ValidationService {
   rpc Validate (ValidateRequest) returns (ValidateResponse);
