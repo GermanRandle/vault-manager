@@ -1,7 +1,6 @@
 ### [v0.1] gRPC communication `api-gateway <-> vault-service`
 
 - Implement client
-- Test how schema modifications work
 - Docker for running two MS at the same time
 
 ### [v0.1.1] Infrastructure enhancements

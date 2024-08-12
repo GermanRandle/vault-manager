@@ -1,20 +1,43 @@
 [versions]
+
+# Essential
+kotlin = '2.0.0'
+junit = '5.10.3'
+
+# gRPC
+grpc-protobuf = '1.66.0'
+grpc-kotlin = '1.4.1'
+protobuf-google = '4.27.3'
+protobuf-plugin = '0.9.4'
+
+# Other
 graphql-kotlin = '7.1.4'
 idea-ext = '1.1.8'
-junit = '5.10.3'
-kotlin = '2.0.0'
 ktor = '2.3.12'
 logback = '1.5.6'
 
 [libraries]
-graphql-kotlin-ktor-server = { module = 'com.expediagroup:graphql-kotlin-ktor-server', version.ref = 'graphql-kotlin' }
+
+# Junit
 junit-jupiter-api = { module = 'org.junit.jupiter:junit-jupiter-api', version.ref = 'junit' }
 junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine', version.ref = 'junit' }
+
+# gRPC
+grpc-java-gen = { module = 'io.grpc:protoc-gen-grpc-java', version.ref = 'grpc-protobuf' }
+grpc-kotlin-stub = { module = 'io.grpc:grpc-kotlin-stub', version.ref = 'grpc-kotlin' }
+grpc-kotlin-gen = { module = 'io.grpc:protoc-gen-grpc-kotlin', version.ref = 'grpc-kotlin' }
+grpc-protobuf = { module = 'io.grpc:grpc-protobuf', version.ref = 'grpc-protobuf' }
+protobuf-kotlin = { module = 'com.google.protobuf:protobuf-kotlin', version.ref = 'protobuf-google' }
+protoc = { module = 'com.google.protobuf:protoc', version.ref = 'protobuf-google' }
+
+# Other
+graphql-kotlin-ktor-server = { module = 'com.expediagroup:graphql-kotlin-ktor-server', version.ref = 'graphql-kotlin' }
 ktor-server-core = { module = 'io.ktor:ktor-server-core-jvm', version.ref = 'ktor' }
 ktor-server-netty = { module = 'io.ktor:ktor-server-netty-jvm', version.ref = 'ktor' }
 logback = { module = 'ch.qos.logback:logback-classic', version.ref = 'logback' }
 
 [bundles]
+grpc-kotlin = ['grpc-kotlin-stub', 'grpc-kotlin-gen']
 junit = ['junit-jupiter-api', 'junit-jupiter-engine']
 ktor = ['ktor-server-core', 'ktor-server-netty']
 
@@ -22,3 +45,4 @@ ktor = ['ktor-server-core', 'ktor-server-netty']
 idea-ext = { id = 'org.jetbrains.gradle.plugin.idea-ext', version.ref = 'idea-ext' }
 jvm = { id = 'org.jetbrains.kotlin.jvm', version.ref = 'kotlin' }
 ktor = { id = 'io.ktor.plugin', version.ref = 'ktor' }
+protobuf = { id = 'com.google.protobuf', version.ref = 'protobuf-plugin' }

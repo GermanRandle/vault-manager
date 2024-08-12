@@ -14,6 +14,10 @@ plugins {
 
     // Extension for IJ IDEA, for avoiding nested packages (in particular).
     alias(libs.plugins.idea.ext)
+
+    // Provides protobuf compilation.
+    // https://github.com/google/protobuf-gradle-plugin
+    alias(libs.plugins.protobuf)
 }
 
 tasks.named<Test>("test") {
@@ -27,6 +31,11 @@ repositories {
 }
 
 dependencies {
+    // Protocol buffers https://github.com/grpc/grpc-kotlin/tree/master/compiler
+    implementation(libs.protobuf.kotlin) // com.google.protobuf.kotlin package
+    implementation(libs.grpc.protobuf) // io.grpc.protobuf package
+    implementation(libs.bundles.grpc.kotlin) // code generation & runtime support
+
     // JUnit
     testImplementation(libs.bundles.junit)
 }
@@ -52,6 +61,32 @@ idea {
         settings {
             packagePrefix["src/main/kotlin"] = packageName
             packagePrefix["src/test/kotlin"] = packageName
+        }
+    }
+}
+
+// https://github.com/grpc/grpc-kotlin/tree/master/compiler
+protobuf {
+    protoc {
+        artifact = libs.protoc.get().toString()
+    }
+    plugins {
+        create("grpc") {
+            artifact = libs.grpc.java.gen.get().toString()
+        }
+        create("grpckt") {
+            artifact = "${libs.grpc.kotlin.gen.get()}:jdk8@jar"
+        }
+    }
+    generateProtoTasks {
+        all().forEach {
+            it.plugins {
+                create("grpc")
+                create("grpckt")
+            }
+            it.builtins {
+                create("kotlin")
+            }
         }
     }
 }
