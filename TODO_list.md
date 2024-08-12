@@ -1,6 +1,5 @@
 ### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
-- Protobuf naming (Grpc<>)
 - Dependency injection
 - Exception safety
 - Gql success/error
