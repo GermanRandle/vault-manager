@@ -1,6 +1,6 @@
 option java_package = "vault.manager.vaultService.server.proto";
 
-service GrpcValidationService {
+service GrpcInspectionService {
   rpc Validate (GrpcValidateRequest) returns (GrpcValidateResponse);
 }
 

@@ -1,5 +1,6 @@
 ### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
+- Think about ValidateGraphQLQuery – object or class?
 - Dependency injection
 - Exception safety
 - Gql success/error
@@ -25,8 +26,11 @@
 
 ## Ideas for future
 
+- Days creation (+mutation grpc service)
 - Routines auto-creation
 - Dead links tracking
 - Notifications to Telegram (new MS + Kafka)
 - Regular reminders (new MS)
 - Backups, auto-backups
+- Statistics service
+- Control over processes (in inspection service)
