@@ -1,6 +1,6 @@
 ### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
-- Think about ValidateGraphQLQuery – object or class?
+- Read Kotlin official doc Concepts section 
 - Dependency injection
 - Exception safety
 - Gql success/error
