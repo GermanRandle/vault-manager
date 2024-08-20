@@ -7,6 +7,8 @@ import vault.manager.apiGateway.server.integration.vaultService.VaultServiceClie
 class ValidateGraphQLQuery internal constructor(
     private val vaultServiceClient: VaultServiceClient,
 ) : Query {
-    @Suppress("unused")
-    suspend fun validate() = GqlValidationResult.fromClient(vaultServiceClient.validate())
+    suspend fun validate() =
+        GqlValidationResult.fromClientResponse(
+            vaultServiceClient.validate(),
+        )
 }

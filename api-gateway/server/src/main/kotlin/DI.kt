@@ -1,5 +1,6 @@
 package vault.manager.apiGateway.server
 
+import com.expediagroup.graphql.server.operations.Mutation
 import vault.manager.apiGateway.server.graphql.query.ValidateGraphQLQuery
 import vault.manager.apiGateway.server.integration.vaultService.GrpcVaultServiceClient
 import vault.manager.apiGateway.server.integration.vaultService.VaultServiceClient
@@ -13,7 +14,14 @@ internal object DI {
         vaultServiceClient,
     )
 
-    val webServer: WebServer = KtorGraphQLEmbeddedWebServer(
+    private val supportedGraphQLQueries = listOf(
         validateGraphQLQuery,
+    )
+
+    private val supportedGraphQLMutations = emptyList<Mutation>()
+
+    val webServer: WebServer = KtorGraphQLEmbeddedWebServer(
+        supportedGraphQLQueries,
+        supportedGraphQLMutations,
     )
 }

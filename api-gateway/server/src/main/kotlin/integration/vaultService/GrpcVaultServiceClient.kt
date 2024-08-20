@@ -4,8 +4,8 @@ import vault.manager.apiGateway.vaultServiceClient.inspectionServiceGrpcClient
 import vault.manager.apiGateway.vaultServiceClient.proto.grpcValidateRequest
 
 internal class GrpcVaultServiceClient : VaultServiceClient {
-    override suspend fun validate(): VaultServiceValidationResult =
-        VaultServiceValidationResult.fromGrpc(
+    override suspend fun validate() =
+        VaultServiceValidationResponse.fromGrpc(
             inspectionServiceGrpcClient.validate(grpcValidateRequest {}),
         )
 }
