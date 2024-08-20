@@ -1,6 +1,5 @@
 ### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
-- Read Kotlin official doc Concepts section (continue from Nested and inner classes)
 - Dependency injection
 - Exception safety
 - Gql success/error
