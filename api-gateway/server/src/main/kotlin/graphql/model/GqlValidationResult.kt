@@ -1,12 +1,12 @@
 package vault.manager.apiGateway.server.graphql.model
 
-import vault.manager.apiGateway.vaultServiceClient.proto.InspectionService.GrpcValidateResponse
+import vault.manager.apiGateway.server.integration.vaultService.VaultServiceValidationResult
 
 data class GqlValidationResult(
     val defects: List<String>,
-)
-
-internal fun GrpcValidateResponse.toGql() =
-    GqlValidationResult(
-        defects = this.defectsList,
-    )
+) {
+    companion object {
+        internal fun fromClient(validationResponse: VaultServiceValidationResult): GqlValidationResult =
+            GqlValidationResult(defects = validationResponse.defects)
+    }
+}

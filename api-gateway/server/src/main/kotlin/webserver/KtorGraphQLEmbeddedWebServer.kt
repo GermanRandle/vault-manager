@@ -13,37 +13,39 @@ import vault.manager.apiGateway.server.ApplicationConfig
 import vault.manager.apiGateway.server.WebServerConfig
 import vault.manager.apiGateway.server.graphql.query.ValidateGraphQLQuery
 
-internal object KtorGraphQLEmbeddedWebServer : WebServer {
+internal class KtorGraphQLEmbeddedWebServer(
+    validateGraphQLQuery: ValidateGraphQLQuery,
+) : WebServer {
+    private val supportedQueries = listOf(
+        validateGraphQLQuery,
+    )
+
+    private val supportedMutations = emptyList<Mutation>()
+
     override fun run() {
         embeddedServer(
             Netty,
             host = WebServerConfig.HOST,
             port = WebServerConfig.PORT,
-            module = Application::graphQLModule,
+            module = { graphQLModule() },
         ).start(wait = true)
     }
-}
 
-private fun Application.graphQLModule() {
-    install(GraphQL) {
-        schema {
-            packages = ApplicationConfig.graphQLSchemaDefinitionPackages
-            queries = supportedQueries
-            mutations = supportedMutations
+    private fun Application.graphQLModule() {
+        install(GraphQL) {
+            schema {
+                packages = ApplicationConfig.graphQLSchemaDefinitionPackages
+                queries = supportedQueries
+                mutations = supportedMutations
+            }
+        }
+
+        routing {
+            graphQLPostRoute(endpoint = WebServerConfig.GRAPHQL_ENDPOINT)
+            graphiQLRoute(
+                endpoint = WebServerConfig.ROOT_ENDPOINT,
+                graphQLEndpoint = WebServerConfig.GRAPHQL_ENDPOINT,
+            )
         }
     }
-
-    routing {
-        graphQLPostRoute(endpoint = WebServerConfig.GRAPHQL_ENDPOINT)
-        graphiQLRoute(
-            endpoint = WebServerConfig.ROOT_ENDPOINT,
-            graphQLEndpoint = WebServerConfig.GRAPHQL_ENDPOINT,
-        )
-    }
 }
-
-private val supportedQueries = listOf(
-    ValidateGraphQLQuery,
-)
-
-private val supportedMutations = emptyList<Mutation>()
