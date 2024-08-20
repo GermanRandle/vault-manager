@@ -9,3 +9,5 @@ private val grpcChannel = ManagedChannelBuilder.forAddress(
 ).usePlaintext().build()
 
 val inspectionServiceGrpcClient = GrpcInspectionServiceCoroutineStub(grpcChannel)
+
+// When another client will be added, rename the file to "GrpcClients.kt"

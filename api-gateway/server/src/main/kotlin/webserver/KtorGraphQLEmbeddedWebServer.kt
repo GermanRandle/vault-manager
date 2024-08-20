@@ -3,6 +3,7 @@ package vault.manager.apiGateway.server.webserver
 import com.expediagroup.graphql.server.ktor.GraphQL
 import com.expediagroup.graphql.server.ktor.graphQLPostRoute
 import com.expediagroup.graphql.server.ktor.graphiQLRoute
+import com.expediagroup.graphql.server.operations.Mutation
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
 import io.ktor.server.engine.embeddedServer
@@ -10,8 +11,7 @@ import io.ktor.server.netty.Netty
 import io.ktor.server.routing.routing
 import vault.manager.apiGateway.server.ApplicationConfig
 import vault.manager.apiGateway.server.WebServerConfig
-import vault.manager.apiGateway.server.graphql.mutation.supportedMutations
-import vault.manager.apiGateway.server.graphql.query.supportedQueries
+import vault.manager.apiGateway.server.graphql.query.ValidateGraphQLQuery
 
 internal object KtorGraphQLEmbeddedWebServer : WebServer {
     override fun run() {
@@ -41,3 +41,9 @@ private fun Application.graphQLModule() {
         )
     }
 }
+
+private val supportedQueries = listOf(
+    ValidateGraphQLQuery,
+)
+
+private val supportedMutations = emptyList<Mutation>()
