@@ -1,7 +1,6 @@
 ### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
-- Good exception handler
-- Exception logging
+- Exception wrappers
 - Docker for running two MS at the same time
 
 ### [v0.1.1] Infrastructure enhancements
@@ -9,6 +8,7 @@
 - Shared `build.gradle` files for microservices
 - Upgrade Kotlin to 2.0.10+
 - What's the value of Gradle's `group` and `version`?
+- Exception logging (with stacktrace)
 
 ### [v0.2] Feature: vault validation
 
@@ -20,6 +20,7 @@
 - Routine checks
 
 ### [v1.0] Start the open source era
+
 - Prepare my GitHub: README, description, tags
 
 ## Ideas for future
