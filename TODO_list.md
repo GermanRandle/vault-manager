@@ -1,6 +1,5 @@
 ### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
-- Continue SRP + DI refactoring
 - Exception safety
 - Gql success/error
 - Docker for running two MS at the same time

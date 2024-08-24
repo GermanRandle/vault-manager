@@ -1,10 +1,12 @@
 package vault.manager.vaultService.server.webserver
 
 import io.grpc.ServerBuilder
+import io.grpc.kotlin.AbstractCoroutineServerImpl
 import vault.manager.vaultService.server.WebServerConfig
-import vault.manager.vaultService.server.grpc.supportedGrpcServices
 
-internal object GrpcWebServer : WebServer {
+internal class GrpcWebServer(
+    private val supportedGrpcServices: List<AbstractCoroutineServerImpl>,
+) : WebServer {
     override fun run() {
         val serverBuilder = ServerBuilder.forPort(WebServerConfig.PORT)
 
