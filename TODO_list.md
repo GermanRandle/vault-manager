@@ -1,8 +1,7 @@
 ### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
-- GraphQL exception handler
-- Exception safety
-- Gql success/error
+- Good exception handler
+- Exception logging
 - Docker for running two MS at the same time
 
 ### [v0.1.1] Infrastructure enhancements
