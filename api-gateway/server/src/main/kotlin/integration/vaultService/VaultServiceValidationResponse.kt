@@ -6,7 +6,7 @@ internal data class VaultServiceValidationResponse(
     val defects: List<String>,
 )
 
-internal fun InspectionService.GrpcValidateResponse.toGql() =
+internal fun InspectionService.GrpcValidateResponse.toVaultServiceResponse() =
     VaultServiceValidationResponse(
         defects = this.defectsList,
     )
