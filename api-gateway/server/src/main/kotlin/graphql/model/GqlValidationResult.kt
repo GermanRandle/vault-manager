@@ -4,11 +4,9 @@ import vault.manager.apiGateway.server.integration.vaultService.VaultServiceVali
 
 data class GqlValidationResult(
     val defects: List<String>,
-) {
-    companion object {
-        internal fun fromClientResponse(clientResponse: VaultServiceValidationResponse) =
-            GqlValidationResult(
-                defects = clientResponse.defects,
-            )
-    }
-}
+)
+
+internal fun VaultServiceValidationResponse.toGql() =
+    GqlValidationResult(
+        defects = this.defects,
+    )

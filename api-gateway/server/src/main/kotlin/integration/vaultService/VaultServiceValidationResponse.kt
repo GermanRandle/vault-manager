@@ -4,11 +4,9 @@ import vault.manager.apiGateway.vaultServiceClient.proto.InspectionService
 
 internal data class VaultServiceValidationResponse(
     val defects: List<String>,
-) {
-    companion object {
-        fun fromGrpc(grpcValidationResult: InspectionService.GrpcValidateResponse) =
-            VaultServiceValidationResponse(
-                defects = grpcValidationResult.defectsList,
-            )
-    }
-}
+)
+
+internal fun InspectionService.GrpcValidateResponse.toGql() =
+    VaultServiceValidationResponse(
+        defects = this.defectsList,
+    )
