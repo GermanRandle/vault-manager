@@ -1,6 +1,5 @@
 ### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
-- Exception wrappers
 - Docker for running two MS at the same time
 
 ### [v0.1.1] Infrastructure enhancements
@@ -28,6 +27,7 @@
 - Days creation (+mutation grpc service)
 - Routines auto-creation
 - Dead links tracking
+- CI (automatic testing + linting)
 - Notifications to Telegram (new MS + Kafka)
 - Regular reminders (new MS)
 - Backups, auto-backups
