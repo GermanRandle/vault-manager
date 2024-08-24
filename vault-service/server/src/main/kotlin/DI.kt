@@ -13,3 +13,7 @@ internal object DI {
         supportedGrpcServices,
     )
 }
+
+internal object WebServerConfig {
+    const val PORT = 49153
+}
