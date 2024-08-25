@@ -11,23 +11,32 @@ This application pursues two goals:
 
 ## Technical design
 
+### Essential
+
 Architecture: **Microservices**.
 \
-Programming language: **Kotlin**.
+Containerization: **Docker**.
 \
 Build tool: **Gradle**.
 \
-VCS: **Git**.
-\
-IDE: **IntelliJ IDEA**.
-\
-Testing platform: **JUnit**.
-\
+Programming language: **Kotlin**.
+
+
+### Web
+
 Server framework: **Ktor**.
 \
 External API: **GraphQL**.
 \
 Internal API: **gRPC** & **Protocol Buffers**.
+
+### Also...
+
+VCS: **Git**.
+\
+IDE: **IntelliJ IDEA**.
+\
+Testing platform: **JUnit**.
 \
 API Testing: **Postman**.
 \

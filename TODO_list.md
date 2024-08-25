@@ -1,6 +1,9 @@
 ### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
-- Docker for running two MS at the same time
+- Run Docker container and see GraphQL interface
+- Find out why my build.gradle changed
+- Run container with vault-service
+- Docker-compose to run both
 
 ### [v0.1.1] Infrastructure enhancements
 
