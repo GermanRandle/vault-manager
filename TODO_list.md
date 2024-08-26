@@ -1,5 +1,3 @@
-### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
-
 ### [v0.1.1] Infrastructure enhancements
 
 - delete duplicatesStrategy from build.gradle's?

@@ -9,13 +9,21 @@ This application pursues two goals:
 - Manage my vault (simplify its maintenance and my interaction with it);
 - Expand my web development skills.
 
+## How to run
+
+```
+vault-manager % docker-compose up
+```
+
 ## Technical design
 
-### Essential
+### Core
 
 Architecture: **Microservices**.
 \
 Containerization: **Docker**.
+\
+Containers management: **Docker Compose**.
 \
 Build tool: **Gradle**.
 \
