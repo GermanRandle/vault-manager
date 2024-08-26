@@ -6,12 +6,14 @@ COPY . .
 
 RUN gradle jar
 
+
 FROM openjdk:21
 
 WORKDIR /app
 
 COPY --from=build /app/server/build/libs/server.jar /app/app.jar
 
-EXPOSE 49152
-
 CMD ["java", "-jar", "/app/app.jar"]
+
+
+# docker run -p 49152:49152 <image_id>

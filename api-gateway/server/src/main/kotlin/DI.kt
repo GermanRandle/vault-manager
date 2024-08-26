@@ -32,9 +32,7 @@ internal object ApplicationConfig {
 }
 
 internal object WebServerConfig {
-    const val HOST = "127.0.0.1"
     const val PORT = 49152
-
     const val GRAPHQL_ENDPOINT = "graphql"
     const val ROOT_ENDPOINT = "/"
 }

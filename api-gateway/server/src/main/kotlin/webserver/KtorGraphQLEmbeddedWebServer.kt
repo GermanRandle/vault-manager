@@ -24,7 +24,6 @@ internal class KtorGraphQLEmbeddedWebServer(
     override fun run() {
         embeddedServer(
             Netty,
-            host = WebServerConfig.HOST,
             port = WebServerConfig.PORT,
             module = { graphQLModule() },
         ).start(wait = true)
