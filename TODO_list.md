@@ -1,4 +1,8 @@
-### [v0.1.1] Infrastructure enhancements
+### [v1.1] Start the open source era
+
+- Prepare my GitHub: README, description, tags
+
+### [v1.2] Enhancements after v1
 
 - delete duplicatesStrategy from build.gradle's?
 - delete exposes from dockerfiles?
@@ -9,8 +13,9 @@
 - Docker optimization – don't copy unnecessary files
 - Docker optimization – don't run daemon?
 - minimize copypaste
+- use latest jdk?
 
-### [v0.2] Feature: vault validation
+### [v2] Feature: vault validation
 
 - Define basic entities
 - Introduce invariants
@@ -18,10 +23,6 @@
 - How to write tests
 - Validate business ids
 - Routine checks
-
-### [v1.0] Start the open source era
-
-- Prepare my GitHub: README, description, tags
 
 ## Ideas for future
 
