@@ -34,7 +34,6 @@ tasks.named<Jar>("jar") {
     manifest {
         attributes["Main-Class"] = mainClassFullName
     }
-    // TODO: find out why it works
     from(
         configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) }
     )

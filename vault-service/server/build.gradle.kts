@@ -3,6 +3,7 @@ import org.jetbrains.gradle.ext.settings
 
 val javaVersion = 21
 val packageName = "vault.manager.vaultService.server"
+val mainClassFullName = "$packageName.MainKt"
 
 plugins {
     // Facilitates creating an executable JVM application. Implicitly applies the Java plugin (basis for the project).
@@ -28,7 +29,17 @@ plugins {
 
 application {
     // Define the main class for the application.
-    mainClass = "$packageName.MainKt"
+    mainClass = mainClassFullName
+}
+
+tasks.named<Jar>("jar") {
+    manifest {
+        attributes["Main-Class"] = mainClassFullName
+    }
+    from(
+        configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) }
+    )
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
 
 tasks.named<Test>("test") {

@@ -1,9 +1,7 @@
 ### [v0.1] gRPC communication (`api-gateway <-> vault-service`)
 
-- Run Docker container and see GraphQL interface
-- Find out why my build.gradle changed
-- Run container with vault-service
 - Docker-compose to run both
+- delete duplicatesStrategy from build.gradle?
 
 ### [v0.1.1] Infrastructure enhancements
 
@@ -11,6 +9,8 @@
 - Upgrade Kotlin to 2.0.10+
 - What's the value of Gradle's `group` and `version`?
 - Exception logging (with stacktrace)
+- Docker optimization – don't copy unnecessary files
+- Docker optimization – don't run daemon?
 
 ### [v0.2] Feature: vault validation
 
