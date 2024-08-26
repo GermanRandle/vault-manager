@@ -13,7 +13,6 @@ WORKDIR /app
 
 COPY --from=build /app/server/build/libs/server.jar /app/app.jar
 
+EXPOSE 49153
+
 CMD ["java", "-jar", "/app/app.jar"]
-
-
-# docker run -p 49153:49153 <image_id>
