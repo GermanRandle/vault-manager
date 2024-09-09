@@ -1,9 +1,6 @@
-### [v1.1] Start the open source era
+### [v1.1] Technical debt after v1
 
-- Prepare my GitHub: README, description, tags
-
-### [v1.2] Enhancements after v1
-
+- revise ALL files
 - delete duplicatesStrategy from build.gradle's?
 - delete exposes from dockerfiles?
 - Shared `build.gradle` files for microservices
