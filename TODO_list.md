@@ -1,10 +1,11 @@
 ### [v1.1] Technical debt after v1
 
+- Try detekt instead of ktlint
+- Use plugin for automatic library version checks
 - revise ALL files
 - delete duplicatesStrategy from build.gradle's?
 - delete exposes from dockerfiles?
 - Shared `build.gradle` files for microservices
-- Upgrade Kotlin to 2.0.10+
 - What's the value of Gradle's `group` and `version`?
 - Exception logging (with stacktrace)
 - Docker optimization – don't copy unnecessary files
