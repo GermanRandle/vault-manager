@@ -15,7 +15,7 @@ This application pursues two goals:
 vault-manager % docker-compose up
 ```
 
-## Technical design
+## Stack
 
 ### Core
 
