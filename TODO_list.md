@@ -1,7 +1,5 @@
 ### [v1.1] Technical debt after v1
 
-- Try detekt instead of ktlint
-- Use plugin for automatic library version checks
 - revise ALL files
 - delete duplicatesStrategy from build.gradle's?
 - delete exposes from dockerfiles?
@@ -21,6 +19,12 @@
 - How to write tests
 - Validate business ids
 - Routine checks
+
+### [v2.1] Ktlint to Detekt
+- Read about Detekt
+- Delete Ktlint
+- Set up a VPN
+- Use!
 
 ## Ideas for future
 
