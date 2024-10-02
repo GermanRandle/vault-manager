@@ -1,14 +1,14 @@
-### [v1.1] Technical debt after v1
+### [v1.1] Revise all files
 
-- revise ALL files
+- Use convention plugin for sharing build.gradle logic
+  https://docs.gradle.org/current/userguide/sharing_build_logic_between_subprojects.html#sec:convention_plugins
+- Debug Dockerfile
+- Do the same for all modules
 - delete duplicatesStrategy from build.gradle's?
 - delete exposes from dockerfiles?
-- Shared `build.gradle` files for microservices
 - What's the value of Gradle's `group` and `version`?
 - Exception logging (with stacktrace)
-- Docker optimization – don't copy unnecessary files
 - Docker optimization – don't run daemon?
-- minimize copypaste
 - use latest jdk?
 
 ### [v2] Feature: vault validation
